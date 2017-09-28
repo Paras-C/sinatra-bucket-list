@@ -27,10 +27,23 @@ class ListController < Sinatra::Base
   get "/" do
     @page_title = "Your Bucket List"
     @list = $listItems
-    erb :"posts/index"
+    erb :"list/index"
   end
 
-  
+  #NEW
+  get "/list/new" do
+    erb :"list/new"
+  end
+
+  #SHOW
+
+  #CREATE
+
+  #EDIT
+
+  #UPDATE
+
+  #DELETE
 
 
 
