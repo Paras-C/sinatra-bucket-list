@@ -24,7 +24,7 @@ class ListController < Sinatra::Base
 
 
   #INDEX
-  get "/" do
+  get "/list" do
     @page_title = "Your Bucket List"
     @list = $listItems
     erb :"list/index"
@@ -36,6 +36,11 @@ class ListController < Sinatra::Base
   end
 
   #SHOW
+  get "/list/:id" do
+    @id = params[:id].to_i
+    @currentItem = $listItems[@id]
+    erb :"list/show"
+  end
 
   #CREATE
 
