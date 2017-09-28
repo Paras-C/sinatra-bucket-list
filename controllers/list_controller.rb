@@ -21,8 +21,6 @@ class ListController < Sinatra::Base
       activity_description: "Jump out of an aeroplane (with parachute ofc)"
     }]
 
-
-
   #INDEX
   get "/list" do
     @page_title = "Your Bucket List"
@@ -43,6 +41,14 @@ class ListController < Sinatra::Base
   end
 
   #CREATE
+  post "/list" do
+    new_item = {
+      activity_name: params[:activity_name],
+      activity_description: params[:activity_description]
+    }
+    $listItems << new_item
+    redirect "/list"
+  end
 
   #EDIT
 
