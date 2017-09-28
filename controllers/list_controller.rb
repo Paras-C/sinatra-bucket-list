@@ -8,16 +8,16 @@ class ListController < Sinatra::Base
   set :view, Proc.new { File.join(root, "views") }
 
   $listItems = [{
-      activity_name: "Sleep More"
+      activity_name: "Sleep More",
       activity_description: "Get in bed and Sleep more"
     },
     {
-      activity_name: "Travel"  
+      activity_name: "Travel", 
       activity_description: "Visit Every continent"
 
     },
     {
-      activity_name: "Sky Diving"
+      activity_name: "Sky Diving",
       activity_description: "Jump out of an aeroplane (with parachute ofc)"
     }]
 
@@ -26,7 +26,45 @@ class ListController < Sinatra::Base
   #INDEX
   get "/" do
     @page_title = "Your Bucket List"
-
+    @list = $listItems
+    erb :"posts/index"
   end
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 end

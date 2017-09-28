@@ -1,1 +1,11 @@
-<h1>HOME</h1>
+<h1 style="text-align: center;"><%= @page_title %></h1>
+<hr>
+<br>
+<br>
+
+<% @list.each_with_index do |item, index| %>
+  <h2><%= item[:activity_name] %></h2>
+  <hr>
+  <p><%= item[:activity_description] %></p>
+
+<% end %>
