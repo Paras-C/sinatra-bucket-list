@@ -51,6 +51,11 @@ class ListController < Sinatra::Base
   end
 
   #EDIT
+  get "/list/:id/edit" do
+    @id = params[:id].to_i
+    @currentItem = $listItems[@id]
+    erb :"list/edit"
+  end
 
   #UPDATE
 

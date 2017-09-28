@@ -1,0 +1,17 @@
+<h1>Edit Form</h1>
+<hr>
+
+<form action="/list/<%= @id %>" method="POST">
+
+  <label for="activity_name">Activity Name: </label>
+  <input type="text" name="activity_name" value="<%= @currentItem[:activity_name] %>">
+  <br>
+  <br>
+  <label for="activity_description">Body: </label>
+  <textarea name="activity_description"><%= @currentItem[:activity_description] %></textarea>
+
+  <input type="hidden" name="_method" value="PUT">
+  <br>
+  <input type="Submit" value="Update">
+</form>
+
