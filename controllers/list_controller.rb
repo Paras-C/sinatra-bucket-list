@@ -58,34 +58,14 @@ class ListController < Sinatra::Base
   end
 
   #UPDATE
+  put "/list/:id" do
+    id = params[:id].to_i
+    $listItems[id][:activity_name] = params[:activity_name]
+    $listItems[id][:activity_description] = params[:activity_description]
+    redirect "/list/#{id}"
+  end
 
   #DELETE
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
