@@ -9,5 +9,10 @@
   <p><%= item[:activity_description] %></p>
   <a href="http://localhost:9292/list/<%=index%>">View</a>
   <a href="http://localhost:9292/list/<%=index%>/edit">Edit</a>
-
+  <form action="/list/<%= index %>" method="POST"> 
+      <input type="hidden" name="_method" value="DELETE"> 
+      <a href="" name="Delete">Delete</a>
+      <!-- <input type="submit" name="Delete"> --> 
+  </form>
+  
 <% end %>

@@ -66,6 +66,12 @@ class ListController < Sinatra::Base
   end
 
   #DELETE
+  delete "/list/:id" do
+    id = params[:id].to_i
+    $listItems.delete_at(id)
+    redirect "/list"
+
+  end
 
 
 
